@@ -1,0 +1,485 @@
+// bower:scss
+// endbower
+
+html{
+  position: relative!important;
+  min-height: 100%!important;
+  overflow-x:hidden;
+}
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+    display:table;
+    width:100%;
+    margin-bottom: 60px;
+    background-color: #F4F4F4;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.search-pane{
+    margin: 0 auto;
+    width: 40%;
+    height: 100vh;
+    margin-top: 10%;
+}
+
+.character-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.navigation-bar{
+    background-color: #2D2727;
+    height: 80px;
+    border: 0px;
+    height:auto;
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 2px 8px 0px rgba(50, 50, 50, 0.75);
+    margin-bottom:0px;
+    z-index: 1;
+    position:relative;
+}
+
+.logo {
+    width: 160px;
+    padding: 6px;
+    height: auto;
+}
+
+.flex{
+  display :flex;
+}
+
+.flex-item{
+    display: flex;
+    align-items: center;
+}
+
+.no-border-radius{
+    border-radius:0px;
+}
+
+#search-input{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border-radius:0px;
+}
+
+.fullwidth{
+  width:100%;
+}
+
+.has-feedback label ~ .form-control-feedback {
+    top: 27px;
+    font-size: 20px;
+    color: #808080;
+}
+
+.titles{
+    font-family: tahoma;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main{
+  
+}
+
+.right-bar{
+    background-color: #ebebeb;
+    position: relative;
+}
+
+.marvel-icon{
+  width:30px;
+  margin-right: 10px;
+}
+
+.charNames{
+    font-weight: bold;
+    position: relative;
+    top: -20px;
+    font-size: 18px;
+    margin : 0px;
+}
+
+.char-image{
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    position: relative;
+    top: -18px;
+    left: -25px;
+    box-shadow: 0px 2px 8px 0px rgba(130, 128, 128, 0.75);
+}
+
+.marvel-btn{
+    color: #fff;
+    background-color: #f01c21;
+    border-color: #e90a0f;
+    border-radius: 0px;
+}
+
+.marvel-btn:hover{
+    color: #fff;
+    background-color: #f01c21;
+    border-color: #e90a0f;
+}
+
+.short-text{
+    margin: -16px 0 22px;
+    text-align: left;
+    color: #AAA1A2;
+    font-family: tahoma;
+    line-height: 1.4;
+    margin-top: -10px;
+}
+
+.comic-link-add{
+  color:#796F6E!important;
+  word-break: break-all;
+}
+.comic-link-add:hover{
+  color: #f01c21!important;
+  cursor:pointer;
+}
+
+.custom-modal-header{
+    border: none;
+    background-color: #000D11;
+    color: #FFF;
+}
+
+.custom-modal-body{
+  padding:0px; 
+}
+
+.custom-modal-footer{
+    border: none;
+    background-color: #383737;
+    color: #FFF;
+}
+
+.modal-primary-btn{
+    height: 40px;
+    background-color: #322827;
+    border: 0px;
+    color: #EC1D23;
+    font-weight: bold;
+    width:100%;
+    outline:none;
+}
+
+.modal-primary-btn img{
+    height: 25px;
+    margin-right: 5px;
+}
+
+.modal-secondary-btn{
+    height: 40px;
+    background-color: #DCDCDC;
+    border: 0px;
+    color: #EC1D23;
+    font-weight: bold;
+    width:100%;
+    outline:none;
+}
+.modal-secondary-btn img{
+    height: 25px;
+    margin-right: 5px;
+}
+
+.modal-close-btn{
+    position: relative;
+    float: right;
+    padding: 14px;
+    width: 50px;
+}
+
+.modal-content{
+  border-radius:0px;
+}
+
+.modal-header {
+    padding: 0px;
+    border-bottom: 0px!important;
+}
+
+.modal-content-title{
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.modal-char-text{
+    font-size: 14px;
+    font-family: ebrima;
+    color: #584E4D;
+}
+
+.trash-btn{
+    right: -200px;
+    top: 32px;
+    width: 40px;
+    height: 40px;
+    background-color: #191919;
+    border-radius: 50%;
+    position: relative;
+}
+
+.remove-btn{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: #000;
+    border-radius: 50%;
+    top: 22px;
+    right: -133px;
+    position: relative;
+}
+
+.trash-btn-icon{
+    color: #fff;
+    line-height: 2.7;
+}
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+    z-index: 2;
+    color: #3D3332;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > li > a, .pagination > li > span{
+  margin-right:10px;
+  margin-left:10px;
+}
+
+@media only screen and (max-width : 1200px) {
+  .logo{
+    display:none;
+  }
+
+  .titles{
+    text-align:center;
+  }
+
+  .char-image{
+    width: 110px;
+    border-radius: 50%;
+    height: 110px;
+    position: relative;
+    top: -30px;
+    left: -25px;
+    box-shadow: 0px 2px 8px 0px rgba(130, 128, 128, 0.75);
+  }
+
+  .form-wrap{
+    height:auto!important;
+  }
+
+  .footer {
+    display: table-row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #2D2727;
+}
+
+  .footer-text{
+    color:white;
+    margin-lef: 0px!important;  
+  }
+}
+
+.footer {
+  display:table-row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #2D2727;;
+}
+
+.footer-text{
+  color:white;
+  margin-lef: 60px;  
+}
+
+    @media (min-width: 900px) {
+      [dynamic-layout]{
+        width: 900px;
+        margin-top: 20px;
+      }
+      .dynamic-layout-col-4{
+        width : 300px;
+      }
+      .dynamic-layout-col-8{
+        width : 600px;
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 900px){
+      [dynamic-layout]{
+        width: 600px;
+      }
+      .dynamic-layout-col-4{
+        width : 300px;
+      }
+      .dynamic-layout-col-8{
+        width : 600px;
+      }
+    }
+
+    @media (max-width: 600px){
+      [dynamic-layout]{
+        width: 300px;
+      }
+      .dynamic-layout-col-4{
+        width : 300px;
+      }
+      .dynamic-layout-col-8{
+        width : 300px;
+      }
+    }
+
+    .dynamic-layout-item {
+      padding: 10px;
+    }
+
+    .move-items-animation{
+      transition-property: left, top;
+      transition-duration: .5s;
+      transition-timing-function: ease-in-out;
+    }
+
+    .dynamic-layout-item-parent.ng-enter{
+      transition: .5s ease-in-out;
+      opacity:0;
+    }
+    .dynamic-layout-item-parent.ng-enter.ng-enter-active{
+      opacity:1;
+    }
+
+    .dynamic-layout-item-parent.ng-leave{
+      transition: .5s ease-in-out;
+      opacity:1;
+    }
+    .dynamic-layout-item-parent.ng-leave.ng-leave-active{
+      opacity:0;
+    }
+
+    [dynamic-layout]{
+      float: left;
+      position: relative;
+    }
+
+    .marvel-card-header{
+      background-color: #323030!important;
+      color: #fff!important;
+    }
+
+    .add-to-list-link{
+      font-size: 12px;
+      color: #898988;
+    }
+
+    .slide{
+      height: 300px;
+      margin-top: 10%;
+      width: 250px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    border-radius:0px;
+}
+

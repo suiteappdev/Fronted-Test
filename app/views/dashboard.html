@@ -1,0 +1,90 @@
+<div ng-controller="DashboardCtrl">
+	<nav class="navbar navbar-default navigation-bar" >
+	        <div class="container-fluid">
+		        <div class="col-lg-3">
+		        	<a>
+		        		<img class="logo" src="images/marvel-logo.png">
+		        	</a>
+		        </div>
+		        <div class="col-lg-6">
+			        <div class="form-wrap flex " style="height:60px;">
+						<form class="flex-item fullwidth" role="form">
+						  <div class="form-group has-feedback fullwidth">
+						    <label class="control-label" for="search-input"></label>
+						    <input ng-keyup="onType()" ng-model="form.data.criteria" type="text" placeholder="Search Character..." class="form-control"  id="search-input">
+						    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+						  </div>
+						</form>	        	
+			        </div>
+		        </div>
+		        <div class="col-lg-3">
+		        	
+		        </div>
+	        </div>
+	</nav>
+		<div class="col-lg-9">
+			<div ng-show="!loadingChars" class="col-lg-12" style="margin-bottom: 20px;">
+				<div class="col-lg-8">
+					<h3 class="titles"><img class="marvel-icon" src="/images/char-icon.png">Characters</h3>
+				</div>
+				<div class="col-lg-4">
+				  <div class="form-group has-feedback fullwidth">
+				    <label class="control-label" for="search-input"></label>
+					  <select class="form-control select" id="sel1">
+					    <option>Modified</option>
+					  </select>
+				    <span style="font-size:12px;top:20px;" class="glyphicon glyphicon-chevron-down form-control-feedback"></span>
+				  </div>
+				</div>
+			</div>
+			<div>
+			<div ng-show="loadingChars" class="col-lg-12 text-center visible-lg ">
+				<h2 style="color:gray;margin-top: 10%;">No Results</h2>
+			</div>
+				<div ng-show="!loadingChars" class="col-lg-6" ng-repeat="record in records" >
+					<mhero heroe="record" on-add="addtoFavourite()"></mhero>
+				</div>
+				<div class="col-lg-12 text-center" ng-show="records.length > 0">
+					<nav aria-label="Page navigation example">
+					  <ul class="pagination">
+					    <li class="page-item">
+					      <a class="page-link" href="#" aria-label="Previous">
+					        <span aria-hidden="true">&laquo;</span>
+					        <span class="sr-only">Previous</span>
+					      </a>
+					    </li>
+					    <li class="page-item"><a class="page-link" href="#">1</a></li>
+					    <li class="page-item"><a class="page-link" href="#">2</a></li>
+					    <li class="page-item"><a class="page-link" href="#">3</a></li>
+					    <li class="page-item">
+					      <a class="page-link" href="#" aria-label="Next">
+					        <span aria-hidden="true">&raquo;</span>
+					        <span class="sr-only">Next</span>
+					      </a>
+					    </li>
+					  </ul>
+					</nav>				
+				</div>
+			</div>
+
+		</div>
+		<div class="col-lg-3" ng-init="load()">
+			<div class="right-bar row" ng-show="favourites.length > 0">
+				<div class="col-lg-12">
+					<h3 class="titles text-center"><img class="marvel-icon" src="/images/shield-icon.jpg">My Favourites</h3>
+					<div class="favourite-list text-center">
+						<div ng-repeat="comic in favourites" class="favourite-comic">
+							<div>
+								<a class="remove-btn" ng-click="removeComic()" href="">
+									<i class="trash-btn-icon glyphicon glyphicon-trash">
+									</i>
+								</a>
+								<img style="width:100%;" ng-src="{{comic.image || comic.thumbnail.path +'.' +comic.thumbnail.extension || 'images/no-image.png'}}">		
+							</div>
+							<h4>{{comic.title || comic.name}}</h4>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>
+</div>

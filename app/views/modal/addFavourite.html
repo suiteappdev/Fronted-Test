@@ -1,0 +1,37 @@
+<div class="inmodal" ng-init="getComicDetails()">
+    <div class="modal-header">
+      <div class="col-lg-12">
+          <a ng-click="$close()" href=""><img  class="modal-close-btn" src="images/close-modal-icon.jpg"></a>
+      </div>      
+    </div>  
+  	<div class="modal-body">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="loader-area" ng-show="loading">
+                <img style="width:100%;" src="images/marvel_loader.gif">
+            </div>            
+          </div>
+        </div>
+        <div class="row" ng-show="!loading">
+          <div class="col-lg-4">
+            <img preload-image default-image="/images/marvel_loader.gif" fallback-image="/images/marvel_loader.gif" style="width:100%;" ng-src="{{comicDetail.thumbnail.path + '.' + comicDetail.thumbnail.extension}}">
+          </div>
+          <div class="col-lg-8">
+            <h4 style="font-family:ebrima;margin-top:0px!important;font-weight: bold;">{{comicDetail.title || comicDetail.name}}</h4>
+            <p class="modal-char-text">{{comicDetail.description}}</p>
+          </div>      
+        </div>
+    </div>
+    <div ng-show="!loading" class="modal-footer custom-modal-footer" style="padding:0px;">
+        <div class="col-lg-6">
+          <div class="row">
+              <button type="button" class="modal-primary-btn" ng-click="ok()"><img src="images/shield-icon-inverted.jpg">ADDED FAVOURITE</button>         
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <button type="button" class="modal-secondary-btn" class="btn-block" ng-click="cancel()"><img src="images/icon-shopping-cart.jpg">BUY FOR $3.99</button>          
+          </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+					<div style="padding:10px;box-sizing:border-box;height:auto;background-color: #fff;margin-bottom:30px;" class="card">
+						<div class="row">
+							<div class="col-lg-4">
+							<img class="char-image" ng-src="{{heroe.thumbnail.path +'.' +heroe.thumbnail.extension}}">
+							</div>
+							<div class="col-lg-8">
+								<h4 class="charNames">{{heroe.name.toUpperCase()}}</h4>
+								<p class="short-text">Lorem Ipsum es simplemente Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó </p>
+								<button ng-click="detail()"class="btn marvel-btn"><strong>View More</strong></button>
+							</div>								
+						</div>
+						<div class="row">
+							<div class="col-lg-12" ng-hide="heroe.comics.available == 0">
+								<h4 style="color:#796F6E!important;"class="titles text-left">Related Comic</h4>
+							</div>
+								<div class="comics">
+									<div class="col-lg-12">
+										<p style="text-align: center; color: #808080;margin-top: 20px;" ng-show="heroe.comics.available == 0"><i class="glyphicon glyphicon-info-sign"></i> &nbsp;This Hero no have Comics</p>									
+									</div>
+									<div class="col-lg-6" ng-repeat="comic in heroe.comics.items | limitTo: 4">
+										<a class="comic-link-add" ng-click="bridge()" >{{comic.name}}</a>
+									</div>
+								</div>
+
+						</div>
+					</div>
